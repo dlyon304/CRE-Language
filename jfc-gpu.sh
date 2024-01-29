@@ -4,6 +4,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH -o jupyterFromCluster-log-%A.txt
 #SBATCH -e jupyterFromCluster-log-%A.txt
+#SBATCH -J jn-g-LNG
 
 # LOAD ANACONDA MODULE
 eval $(spack load --sh miniconda3)
