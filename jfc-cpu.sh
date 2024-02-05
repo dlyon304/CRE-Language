@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --mem=8G
+#SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
 #SBATCH --time=8:00:00
 #SBATCH -o jupyterFromCluster-log-%A.txt

@@ -8,7 +8,7 @@ import math
 
 
 
-def po_sentences(labels:list[str], file_path:str, seq_len:int = 164, k:int=5, divs:int=4) -> list[str]:
+def po_sentences(labels:list, file_path:str, seq_len:int = 164, k:int=5, divs:int=4) -> list:
     
     print(len(labels), "sentences to create", flush=True)
     
@@ -18,7 +18,7 @@ def po_sentences(labels:list[str], file_path:str, seq_len:int = 164, k:int=5, di
     sentences = []
     
     if type(labels != list):
-        lables = list(labels)
+        labels = list(labels)
     
     ####
     tracker = 0
@@ -60,9 +60,63 @@ def po_sentences(labels:list[str], file_path:str, seq_len:int = 164, k:int=5, di
     print("All sentences created", flush=True)
     return sentences
             
+
+
+
+def sentences_allosteric(labels:list, file_path:str, seq_len:int = 164, k:int=5, divs:int=4, allostery:int=10) -> list:
+    
+    print(len(labels), "sentences to create", flush=True)
+    
+    motif_df = pd.read_parquet(file_path)
+    
+    score_interval = (1 - min(motif_df['occupancy']))/divs
+    sentences = []
+    
+    if type(labels != list):
+        labels = list(labels)
+    
+    ####
+    tracker = 0
+    q = math.floor(len(labels)/4)
+    ####
+    existing = set(motif_df.index.get_level_values(0))
+    
+    for label in labels:
+        if label not in existing:
+            sentences.append(str(math.ceil(seq_len/k)))
+            continue
         
-    
-    
-    
-    
+        sdf = motif_df.loc[label]
+        i = 0
+        s = []
+        for loc, row in sdf.iterrows():
+            d = loc - i
+            if d > 0:
+                if d <=allostery and i !=0:
+                    prior_motif = s[-1].split('-')[0]
+                    del s[-1]
+                    s.append(prior_motif+'-'+row['motif'])
+                else:
+                    s.append(str(math.ceil(d/k)))
+            s.append(
+                "-".join(
+                    [row['motif'],
+                    row['strand'],
+                    str(int(row['occupancy']/score_interval))]))
+            i = loc + row['length'] - 1
+        s.append(
+            str(math.ceil(
+                (seq_len - 1 - i)/k
+            ))
+        )
+        sentences.append(" ".join(s))
+        
+        ###
+        tracker += 1
+        if tracker % q == 0:
+            print('\t', tracker,'/',len(labels), "sentences created", flush=True)
+        
+        
+    print("All sentences created", flush=True)
+    return sentences
 
