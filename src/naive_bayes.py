@@ -1,5 +1,5 @@
-# Takes in any sentences of arbitrary vocabulary.  Creates a naive bayes classifier.  The calculates f1 performance
-# Daniel Lyon | Cohen Lab | 1/26/24
+# Takes in any set of sequences and labels.  Transforms them into "sentences" then creates a bayes classifier and tests performance
+# Daniel Lyon | WUSTL Cohen Lab | Jan, 2024
 
 import os
 import argparse
