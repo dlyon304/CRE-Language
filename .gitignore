@@ -1,3 +1,6 @@
 jupyter*
 sandbox*
-Data/
+Data/Fasta
+Data/Motifs
+Data/PWMs
+Data/RNA
