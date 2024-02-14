@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --mem=8G
-#SBATCH --cpus-per-task=4
+#SBATCH --cpus-per-task=2
 #SBATCH -e log/naive_bayes.err-%A
 #SBATCH -o log/naive_bayes.out-%A
 
 eval $(spack load --sh miniconda3)
 source activate language
 
-output=bayes_${SLURM_JOB_ID}
+output=$1_${SLURM_JOB_ID}
 mkdir -p $output
 
 datafile=Data/activity.csv

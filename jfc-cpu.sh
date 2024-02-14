@@ -2,17 +2,12 @@
 #SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
 #SBATCH --time=8:00:00
-#SBATCH -o jupyterFromCluster-log-%A.txt
-#SBATCH -e jupyterFromCluster-log-%A.txt
-#SBATCH -J jn-c-LNG
+#SBATCH -o jupyterFromCluster-%A.txt
+#SBATCH -e jupyterFromCluster-%A.txt
+#SBATCH -J jn-c-TF
 
-# LOAD ANACONDA MODULE
-eval $(spack load --sh miniconda3)
-unset PYTHONPATH
-unset XDG_RUNTIME_DIR
-
-# ACTIVATE CONDA ENVIRONMENT
-source activate language
+# LOAD SPACK ENV
+eval $(spack env activate --sh tensorflow)
 
 # CREATE PORT AND GET NAME OF SERVER NODE
 port=$(shuf -i9000-9999 -n1)

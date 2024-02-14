@@ -8,7 +8,7 @@ import pandas as pd
 from collections import Counter
 import math
 from sklearn.metrics import f1_score
-from grammar.sentences import po_sentences
+from grammar import sentences
 import random
 
 SEQUENCE_COL = 'sequence'
@@ -102,11 +102,14 @@ def eval_bae(Ytrue: list[str], Ypred: list[str]) -> pd.Series:
     
 def main(data_file, motif_file, output_dir, test_file, test_motifs):
     
+    # Choose how to construct sentence
+    sentence_func = sentences.sentences_Cspacer
+    
     print("Read in datafile to pandas dataframe", flush=True)
     # Read in datafile to pandas dataframe.  Then convert all sequences to sentences and add on as a column
     data_df = pd.read_csv(data_file,index_col=0)
     data_df['split'] = random.choices([TRAIN_KEY, TEST_KEY], cum_weights=[0.8,1], k=len(data_df))
-    data_df['sentence'] = po_sentences(data_df.index.to_list(),motif_file)
+    data_df['sentence'] = sentence_func(data_df.index.to_list(),motif_file)
 
     print("Split train and test from main dataframe", flush=True)
     #Split train and test from main dataframe
@@ -140,7 +143,7 @@ def main(data_file, motif_file, output_dir, test_file, test_motifs):
     if test_file:
         print("Evaluating secondary test file", flush=True)
         special_test_df = pd.read_csv(test_file,index_col=0)
-        special_test_df['sentence'] = po_sentences(special_test_df.index.to_list(), test_motifs)
+        special_test_df['sentence'] = sentence_func(special_test_df.index.to_list(), test_motifs)
         special_test_df['sentence'].to_csv(os.path.join(output_dir,"extra_test_sentences.csv"))
         special_test_truths = special_test_df[LABEL_COL].to_list()
         special_test_sentences = special_test_df['sentence'].to_list()
