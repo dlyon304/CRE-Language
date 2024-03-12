@@ -13,7 +13,7 @@ from tensorflow import keras
 # n_fc = 32
 # n_filters = 128
 
-def getClassCNN(seq_len, n_classes, n_filters=128, n_fc=32, ksize=10, poolW=8, dropout=0.25):
+def getClassCNN(seq_len, n_classes, n_filters=128, n_fc=32, ksize=10, poolW=8, dropout=0.25, lr=0.0001):
     
     model = keras.models.Sequential([
 
@@ -48,12 +48,7 @@ def getClassCNN(seq_len, n_classes, n_filters=128, n_fc=32, ksize=10, poolW=8, d
     ])
     
     model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
+              optimizer=keras.optimizers.Adam(learning_rate=lr),
               metrics=['accuracy'])
 
     return model
-
-
-
-
-

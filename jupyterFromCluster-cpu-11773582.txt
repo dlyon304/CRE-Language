@@ -1,0 +1,148 @@
+<string>:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+<string>:3: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+node: n140
+port: 9482
+[I 2024-03-11 13:55:41.994 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2024-03-11 13:55:42.003 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2024-03-11 13:55:42.012 ServerApp] jupyterlab | extension was successfully linked.
+[W 2024-03-11 13:55:42.018 JupyterNotebookApp] 'password' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+[W 2024-03-11 13:55:42.025 ServerApp] ServerApp.password config is deprecated in 2.0. Use PasswordIdentityProvider.hashed_password.
+[I 2024-03-11 13:55:42.027 ServerApp] notebook | extension was successfully linked.
+[I 2024-03-11 13:55:43.937 ServerApp] notebook_shim | extension was successfully linked.
+[I 2024-03-11 13:55:44.213 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2024-03-11 13:55:44.219 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2024-03-11 13:55:44.223 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2024-03-11 13:55:44.232 LabApp] JupyterLab extension loaded from /ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyterlab
+[I 2024-03-11 13:55:44.234 LabApp] JupyterLab application directory is /ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/share/jupyter/lab
+[I 2024-03-11 13:55:44.237 LabApp] Extension Manager is 'pypi'.
+[I 2024-03-11 13:55:44.252 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2024-03-11 13:55:44.259 ServerApp] notebook | extension was successfully loaded.
+[I 2024-03-11 13:55:44.262 ServerApp] Serving notebooks from local directory: /scratch/bclab/dlyon/CRE-Language
+[I 2024-03-11 13:55:44.264 ServerApp] Jupyter Server 2.12.5 is running at:
+[I 2024-03-11 13:55:44.266 ServerApp] http://n140:9482/lab
+[I 2024-03-11 13:55:44.269 ServerApp]     http://127.0.0.1:9482/lab
+[I 2024-03-11 13:55:44.271 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 2024-03-11 13:55:44.331 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+[W 2024-03-11 13:56:27.105 ServerApp] 404 GET /hub/api (@192.168.80.32) 93.35ms referer=None
+[I 2024-03-11 13:56:27.187 JupyterNotebookApp] 302 GET /tree? (@192.168.80.32) 0.70ms
+[I 2024-03-11 13:56:30.594 ServerApp] User 79b1d86a27954a2ca2ed7f290d763072 logged in.
+[I 2024-03-11 13:56:30.597 ServerApp] 302 POST /login? (79b1d86a27954a2ca2ed7f290d763072@192.168.80.32) 46.80ms
+[W 2024-03-11 13:56:32.520 ServerApp] 404 GET /hub/api (@192.168.80.32) 1.54ms referer=None
+[W 2024-03-11 13:56:35.374 ServerApp] 404 GET /hub/api (@192.168.80.32) 1.47ms referer=None
+[I 2024-03-11 13:56:35.421 ServerApp] Kernel started: 5405a15c-7d51-4694-b862-4da09887d6f0
+[I 2024-03-11 13:56:36.522 ServerApp] Connecting to kernel 5405a15c-7d51-4694-b862-4da09887d6f0.
+2024-03-11 13:56:41.371880: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-11 13:56:41.420723: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-11 13:56:41.420765: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-11 13:56:41.422356: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-11 13:56:41.431671: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-11 13:56:41.432803: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-11 13:56:46.032998: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+[I 2024-03-11 14:58:39.254 ServerApp] Kernel interrupted: 5405a15c-7d51-4694-b862-4da09887d6f0
+[I 2024-03-11 15:03:02.540 ServerApp] Kernel interrupted: 5405a15c-7d51-4694-b862-4da09887d6f0
+[I 2024-03-11 15:53:37.423 ServerApp] Starting buffering for 5405a15c-7d51-4694-b862-4da09887d6f0:98303710-d511-4a83-baa6-668a5000c1c1
+[W 2024-03-11 15:54:08.615 ServerApp] 404 GET /hub/api (@192.168.80.32) 21.79ms referer=None
+[I 2024-03-11 15:54:08.754 JupyterNotebookApp] 302 GET /tree? (@192.168.80.32) 0.76ms
+[W 2024-03-11 15:54:10.473 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 15:54:10.522 ServerApp] 403 GET /api/kernelspecs?1710190450463 (@192.168.80.32) 51.23ms referer=None
+[W 2024-03-11 15:54:10.525 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 15:54:10.528 ServerApp] 403 GET /api/kernels?1710190450464 (@192.168.80.32) 56.34ms referer=None
+[W 2024-03-11 15:54:10.530 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 15:54:10.533 ServerApp] 403 GET /api/kernels?1710190450465 (@192.168.80.32) 60.85ms referer=None
+[W 2024-03-11 15:54:10.535 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 15:54:10.538 ServerApp] 403 GET /api/sessions?1710190450466 (@192.168.80.32) 65.91ms referer=None
+[W 2024-03-11 15:54:10.542 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 15:54:10.545 ServerApp] 403 GET /api/kernelspecs?1710190450520 (@192.168.80.32) 3.39ms referer=None
+[W 2024-03-11 17:26:23.040 ServerApp] 404 GET /hub/api (@192.168.80.32) 2.68ms referer=None
+[I 2024-03-11 17:26:23.221 JupyterNotebookApp] 302 GET /tree? (@192.168.80.32) 0.39ms
+[W 2024-03-11 17:27:23.744 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 17:27:23.748 ServerApp] 403 GET /api/kernelspecs?1710196043738 (@192.168.80.32) 5.95ms referer=None
+[W 2024-03-11 17:27:23.751 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 17:27:23.754 ServerApp] 403 GET /api/kernels?1710196043740 (@192.168.80.32) 11.00ms referer=None
+[W 2024-03-11 17:27:23.756 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 17:27:23.759 ServerApp] 403 GET /api/kernels?1710196043741 (@192.168.80.32) 15.82ms referer=None
+[W 2024-03-11 17:27:23.762 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 17:27:23.765 ServerApp] 403 GET /api/sessions?1710196043742 (@192.168.80.32) 21.04ms referer=None
+[W 2024-03-11 17:27:23.768 ServerApp] wrote error: 'Forbidden'
+    Traceback (most recent call last):
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 1788, in _execute
+        result = method(*self.path_args, **self.path_kwargs)
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/tornado/web.py", line 3289, in wrapper
+        url = self.get_login_url()
+      File "/ref/bclab/software/spack-0.17.2/var/spack/environments/tensorflow/.spack-env/._view/rqhmcyh7nypoz5rdv2dhlle4drkq4xlg/lib/python3.10/site-packages/jupyter_server/base/handlers.py", line 763, in get_login_url
+        raise web.HTTPError(403)
+    tornado.web.HTTPError: HTTP 403: Forbidden
+[W 2024-03-11 17:27:23.771 ServerApp] 403 GET /api/kernelspecs?1710196043751 (@192.168.80.32) 3.20ms referer=None

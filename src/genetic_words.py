@@ -98,7 +98,7 @@ def cut_sentences(w, words):
 def main(data_file, motif_file, output_dir, initial_size, N, generations):
     
     print("Read in data", flush=True)
-    sentences = pd.read_csv("Data/all_sentences.csv", index_col=0)
+    sentences = pd.read_csv("Data/Sentences/all_sentences.csv", index_col=0)
     sentences = sentences['sentence'].map(lambda x: np.array(x.split()))
     vCut = np.vectorize(cut_sentences)
     data_df = pd.read_csv(data_file,index_col=0)

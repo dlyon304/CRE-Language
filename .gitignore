@@ -1,9 +1,3 @@
 
-/*
-
-
-!.gitignore
-!*.ipynb
-!src/
-!jfc-cpu.sh
-!A1_old_and_dead/
+Data/
+Runs/

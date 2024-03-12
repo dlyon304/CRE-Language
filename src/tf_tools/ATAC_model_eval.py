@@ -54,6 +54,8 @@ def main(output_dir, data_file, model_path, activity_splits, batch_size, FEATURE
     # Load keras model and test/evaluate
     model = keras.models.load_model(model_path)
     
+    null_metrics = []
+    full_batch_metrics = []
     batch_metrics = []
     data_batches = []
     rounds = ['Genomic', 'CrxMotifMutant', 'Round2', 'Round3a', 'Round3b', 'Round3c', 'Round4a', 'Round4b']
@@ -80,37 +82,85 @@ def main(output_dir, data_file, model_path, activity_splits, batch_size, FEATURE
         truths = np.argmax(y_test, axis=1)
         predictions = np.argmax(predictions_, axis=1)
         
-        report = classification_report(truths,predictions,target_names=classes,output_dict=True)
+        full_batch_metrics.append(classification_report(truths,predictions,target_names=classes))
+        report = classification_report(truths,predictions,target_names=classes, output_dict=True)
         r = report['weighted avg']
         r['accuracy'] = report['accuracy']
         batch_metrics.append(r)
-        print("Finished round", round, "Accuracy:", r['accuracy'])
         
+        null_report = classification_report(truths, random.choices([0,1], k = len(truths)), target_names=classes, output_dict=True)
+        nr = null_report['weighted avg']
+        nr['accuracy'] = null_report['accuracy']
+        null_metrics.append(nr)
+        
+        print("Finished round", round, "Accuracy:", r['accuracy'])
+      
+    # Create and save metric plot  
+    for batch in [batch_metrics, null_metrics]:
+        plt.rcParams['figure.figsize'] = [12, 5]
+        metrics = list(batch[0].keys())
+        support = [int(r['support']) for r in batch]
+        metrics.remove('support')
+        labels = [b+"\n"+str(sup) for b,sup in zip(rounds,support)]
+        
+        fig, ax = plt.subplots()
+        width = 0.15
+        sep = [-2,-1,0,1]
+        for i in range(len(metrics)):
+            
+            ax.bar(
+                x=np.arange(len(batch))+width*sep[i],
+                height = [r[metrics[i]] for r in batch],
+                width=width,
+                label = metrics[i],
+                align='edge',
+            )
+        
+        plt.xticks(ticks=np.arange(len(batch)), labels=labels)
+        plt.ylabel("Score")
+        
+        prefix = "NULL--" if batch == null_metrics else ""
+        
+        title = prefix + " ".join(open_labels) + ":Open | " + " ".join(closed_labels) + ":Closed"
+        plt.title(title)
+        plt.ylim(0,0.75)
+        
+        plt.legend()
+        fig_dir = os.path.join(output_dir,'figures')
+        os.makedirs(
+            fig_dir,
+            exist_ok=True)
+        plt.savefig(
+            os.path.join(fig_dir,prefix+activity_splits+".png")
+            ,format='png')
+
+            
+    # Make combined plots
     plt.rcParams['figure.figsize'] = [12, 5]
-    metrics = list(batch_metrics[0].keys())
-    support = [int(r['support']) for r in batch_metrics]
+    metrics = list(batch[0].keys())
+    support = [int(r['support']) for r in batch]
     metrics.remove('support')
-    labels = [batch+"\n"+str(sup) for batch,sup in zip(rounds,support)]
+    labels = [b+"\n"+str(sup) for b,sup in zip(rounds,support)]
     
     fig, ax = plt.subplots()
-    
     width = 0.15
     sep = [-2,-1,0,1]
     for i in range(len(metrics)):
         
         ax.bar(
-            x=np.arange(len(batch_metrics))+width*sep[i],
-            height = [r[metrics[i]] for r in batch_metrics],
+            x=np.arange(len(batch))+width*sep[i],
+            height = [mdl[metrics[i]]-nll[metrics[i]]  for mdl,nll in zip(batch_metrics, null_metrics)],
             width=width,
             label = metrics[i],
             align='edge',
         )
     
-    plt.xticks(ticks=np.arange(len(batch_metrics)), labels=labels)
-    plt.ylabel("Score")
+    plt.xticks(ticks=np.arange(len(batch)), labels=labels)
+    plt.ylabel("Delta Score")
     
-    title = " ".join(open_labels) + ":Open | " + " ".join(closed_labels) + ":Closed"
+    title = "(Model-Null) " + " ".join(open_labels) + ":Open | " + " ".join(closed_labels) + ":Closed"
     plt.title(title)
+    plt.ylim(-0.4,0.4)
     
     plt.legend()
     fig_dir = os.path.join(output_dir,'figures')
@@ -118,9 +168,23 @@ def main(output_dir, data_file, model_path, activity_splits, batch_size, FEATURE
         fig_dir,
         exist_ok=True)
     plt.savefig(
-        os.path.join(fig_dir,activity_splits+".png")
+        os.path.join(fig_dir,"(Model-Null) "+activity_splits+".png")
         ,format='png')
-        
+    
+    # Create a large log file with all metrics
+    # title = " ".join(open_labels) + ":Open | " + " ".join(closed_labels) + ":Closed"    
+    # reports_file = os.path.join(output_dir, "reports.txt")
+    # with open(reports_file, 'a') as file:
+    #     file.write(title.upper())
+    #     file.write('\n')
+    #     for i in range(len(rounds)):
+    #         file.write(rounds[i])
+    #         file.write('\n')
+    #         file.write(full_batch_metrics[i])
+    #         file.write('\n')
+    #         file.write('\n')
+    #     file.write("\n-------------------------------------------\n")
+    
     
 
     

@@ -1,13 +1,14 @@
 #!/bin/bash
-#SBATCH --mem=10G
-#SBATCH --cpus-per-task=4
-#SBATCH --time=8:00:00
-#SBATCH -o jupyterFromCluster-cpu-%A.txt
-#SBATCH -e jupyterFromCluster-cpu-%A.txt
-#SBATCH -J jn-c-TF
+#SBATCH -n 1
+#SBATCH -N 1
+#SBATCH -p gpu
+#SBATCH --gres=gpu
+#SBATCH --mem=8G
+#SBATCH -o jupyterFromCluster-gpu-log-%A.txt
+#SBATCH -e jupyterFromCluster-gpu-log-%A.txt
+#SBATCH -J jn-g-TF
 
-# LOAD SPACK ENV
-eval $(spack env activate --sh tensorflow)
+eval $(spack env activate --sh tensorflow-gpu)
 
 # CREATE PORT AND GET NAME OF SERVER NODE
 port=$(shuf -i9000-9999 -n1)

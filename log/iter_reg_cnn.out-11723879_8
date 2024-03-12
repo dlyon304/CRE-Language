@@ -1,0 +1,1392 @@
+<string>:3: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
+<string>:3: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead
+2024-03-08 23:41:42.103383: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-08 23:41:42.154470: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-08 23:41:42.155079: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-08 23:41:42.157045: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-08 23:41:42.166215: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-08 23:41:43.250082: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:0 ------
+Training with 6000 data points
+Remaining training data: 80313
+2024-03-08 23:41:46.707395: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-08 23:42:01.444425: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-08 23:42:01.542814: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-08 23:42:01.746328: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-08 23:42:03.598108: I external/local_xla/xla/service/service.cc:168] XLA service 0x149a41839630 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-08 23:42:03.598641: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-08 23:42:03.607037: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709962923.716231 2847332 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.446403  11.604955
+2   11.219268  11.568995
+3   11.199258  11.624791
+4   11.169354  11.814938
+5   11.050578  11.790963
+6   11.110597  11.759062
+7   11.011539  12.394286
+8   10.975668  12.488159
+9   10.965845  11.642220
+10  10.897742  12.048174
+11  10.854647  11.638883
+12  10.786928  11.714903
+13  10.811402  11.964509
+14  10.776626  11.641807
+15  10.662806  11.619924
+16  10.638486  11.737059
+17  10.543616  11.620613
+Test Metrics:
+pcc    0.099420
+scc    0.109243
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.4970470368862152
+<class 'list'> <class 'pandas.core.indexes.base.Index'>
+2024-03-08 23:51:00.105081: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-08 23:51:00.156240: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-08 23:51:00.156990: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-08 23:51:00.159031: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-08 23:51:00.167916: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-08 23:51:01.247282: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:1 ------
+Training with 12000 data points
+Remaining training data: 74313
+2024-03-08 23:51:05.056904: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-08 23:51:20.182838: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-08 23:51:20.285858: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-08 23:51:20.484838: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-08 23:51:22.341177: I external/local_xla/xla/service/service.cc:168] XLA service 0x93ce640 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-08 23:51:22.341791: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-08 23:51:22.349742: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709963482.454071 2849914 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   12.920844  11.678282
+2   12.396859  13.922522
+3   12.221746  17.378351
+4   11.932613  22.372742
+5   11.623806  13.850671
+6   11.476521  11.833583
+7   11.412631  11.683719
+8   11.165488  12.055044
+9   11.030496  11.859464
+10  11.040235  11.785423
+11  10.795957  11.673228
+12  10.762787  11.605514
+13  10.617281  11.529963
+14  10.536819  11.757337
+15  10.541295  11.647400
+16  10.404660  11.413463
+17  10.389880  11.579252
+18  10.282921  11.769964
+19  10.164084  11.652833
+20  10.053083  11.653393
+21  10.001853  11.510097
+22   9.888700  11.593315
+23   9.847709  11.551064
+24   9.846622  11.710999
+25   9.591312  11.672931
+26   9.635768  11.480729
+27   9.574806  11.897557
+28   9.488297  11.669502
+29   9.389346  12.077184
+30   9.237344  11.940845
+31   9.139229  11.814089
+Test Metrics:
+pcc    0.136675
+scc    0.119268
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.7842010259628296
+<class 'list'> <class 'list'>
+2024-03-09 00:00:57.770136: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:00:57.820507: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:00:57.821093: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:00:57.823002: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:00:57.831843: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:00:58.829174: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:2 ------
+Training with 18000 data points
+Remaining training data: 68313
+2024-03-09 00:01:03.126097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:01:18.256372: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:01:18.352784: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:01:18.548091: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:01:20.308021: I external/local_xla/xla/service/service.cc:168] XLA service 0x147f64e567c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:01:20.308782: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:01:20.315865: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709964080.418071 2853901 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   13.038332  11.966769
+2   12.636960  15.216087
+3   12.529170  14.958224
+4   12.278915  12.694732
+5   12.065372  11.963422
+6   11.879094  12.392565
+7   11.749508  11.564095
+8   11.568750  11.403540
+9   11.408356  11.662488
+10  11.283226  11.477731
+11  11.127099  11.430990
+12  11.038526  11.529083
+13  10.903043  11.657557
+14  10.692761  11.645945
+15  10.642380  11.599777
+16  10.453973  11.481343
+17  10.436532  11.350913
+18  10.353525  11.579672
+19  10.191827  11.705021
+20   9.973175  12.058109
+21   9.922655  11.456599
+22   9.813571  11.497754
+23   9.722389  11.436898
+24   9.529076  12.177095
+25   9.547589  11.792434
+26   9.405144  11.552429
+27   9.344569  11.796487
+28   9.151926  11.839351
+29   9.138359  11.802270
+30   8.892206  12.030551
+31   8.873507  11.639612
+32   8.759577  12.565484
+Test Metrics:
+pcc    0.168678
+scc    0.155699
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.8536454439163208
+<class 'list'> <class 'list'>
+2024-03-09 00:11:16.758028: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:11:16.807841: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:11:16.808339: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:11:16.810244: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:11:16.818920: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:11:17.848411: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:3 ------
+Training with 24000 data points
+Remaining training data: 62313
+2024-03-09 00:11:22.819223: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:11:37.891002: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:11:37.993786: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:11:38.198447: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:11:40.043586: I external/local_xla/xla/service/service.cc:168] XLA service 0x14d7d8dd4ce0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:11:40.044247: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:11:40.051887: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709964700.158354 2857721 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   12.679268  12.255408
+2   12.409747  13.221757
+3   12.266703  12.910991
+4   12.124306  11.812922
+5   11.939090  11.462535
+6   11.853716  12.028379
+7   11.656655  11.539278
+8   11.556502  11.388884
+9   11.387560  11.380527
+10  11.257179  11.401802
+11  11.070560  12.125817
+12  10.943050  11.649722
+13  10.808722  11.541627
+14  10.663764  11.673880
+15  10.525196  11.591152
+16  10.415781  11.479341
+17  10.284881  11.814629
+18  10.146535  11.381701
+19  10.039562  11.637325
+20   9.837143  11.856100
+21   9.659150  11.635159
+22   9.660779  11.437881
+23   9.444691  11.829232
+24   9.371634  11.900625
+Test Metrics:
+pcc    0.198516
+scc    0.192601
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.6891050338745117
+<class 'list'> <class 'list'>
+2024-03-09 00:21:00.100511: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:21:00.150107: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:21:00.150690: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:21:00.152473: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:21:00.161075: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:21:01.178506: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:4 ------
+Training with 30000 data points
+Remaining training data: 56313
+2024-03-09 00:21:06.755150: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:21:21.793230: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:21:21.897657: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:21:22.101638: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:21:23.984069: I external/local_xla/xla/service/service.cc:168] XLA service 0x14677553f460 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:21:23.984645: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:21:23.992743: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709965284.101207 2861402 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   12.455071  12.301343
+2   12.240233  12.856686
+3   12.089616  11.874241
+4   11.965104  11.544671
+5   11.842260  11.922849
+6   11.633842  11.661708
+7   11.569620  11.478275
+8   11.368737  11.642870
+9   11.227973  11.537565
+10  11.081985  11.431642
+11  10.993434  11.610769
+12  10.768768  11.445977
+13  10.562962  11.736465
+14  10.452586  11.306906
+15  10.266582  11.556762
+16  10.149939  11.523379
+17   9.973109  11.689698
+18   9.822578  11.526118
+19   9.662801  11.859278
+20   9.522763  12.096293
+21   9.416651  11.603680
+22   9.281578  11.619791
+23   9.124451  12.005433
+24   9.069732  11.671266
+25   8.876190  11.754983
+26   8.738180  11.942348
+27   8.633351  11.915101
+28   8.477975  12.033120
+29   8.361291  12.086847
+Test Metrics:
+pcc    0.221518
+scc    0.216324
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.9357763528823853
+<class 'list'> <class 'list'>
+2024-03-09 00:31:16.747297: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:31:16.799061: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:31:16.799770: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:31:16.801703: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:31:16.810852: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:31:17.898686: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:5 ------
+Training with 36000 data points
+Remaining training data: 50313
+2024-03-09 00:31:24.074360: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:31:39.135754: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:31:39.240194: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:31:39.445280: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:31:41.296780: I external/local_xla/xla/service/service.cc:168] XLA service 0x14be2dff2fc0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:31:41.297455: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:31:41.305545: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709965901.410114 2865109 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   12.165485  12.766048
+2   11.924800  12.445068
+3   11.809751  11.946218
+4   11.635022  11.823564
+5   11.474633  11.549893
+6   11.334391  11.433910
+7   11.189451  11.555655
+8   11.027850  11.474779
+9   10.819007  11.435116
+10  10.711220  11.435345
+11  10.559910  12.051245
+12  10.336700  11.868273
+13  10.216386  11.506110
+14  10.037696  11.536998
+15   9.886833  11.401340
+16   9.727540  11.704033
+17   9.539948  11.722334
+18   9.423156  11.315058
+19   9.253382  11.352973
+20   9.059413  11.624298
+21   8.940243  11.433033
+22   8.773299  11.581732
+23   8.613638  11.571383
+24   8.436651  11.828983
+25   8.310685  11.517466
+26   8.148302  11.628821
+27   8.001490  11.616446
+28   7.859876  11.790196
+29   7.684476  11.704466
+30   7.584911  11.699847
+31   7.370243  12.589345
+32   7.322320  11.914358
+33   7.163120  13.381847
+Test Metrics:
+pcc    0.240122
+scc    0.231911
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.8659440279006958
+<class 'list'> <class 'list'>
+2024-03-09 00:42:36.220702: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:42:36.270188: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:42:36.270842: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:42:36.272791: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:42:36.281477: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:42:37.319470: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:6 ------
+Training with 42000 data points
+Remaining training data: 44313
+2024-03-09 00:42:43.781586: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:42:58.880987: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:42:58.983357: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:42:59.185396: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:43:01.027724: I external/local_xla/xla/service/service.cc:168] XLA service 0x14713a2ec0e0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:43:01.028355: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:43:01.035954: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709966581.142363 2869116 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.984167  12.114973
+2   11.754415  12.643952
+3   11.621925  11.634727
+4   11.427317  11.948226
+5   11.323652  11.518056
+6   11.163638  11.676131
+7   11.055847  11.319412
+8   10.886862  11.431342
+9   10.727720  11.422859
+10  10.512944  11.312466
+11  10.396290  11.315993
+12  10.217387  11.195390
+13  10.047933  11.224449
+14   9.845139  11.207085
+15   9.667083  11.666008
+16   9.543756  11.471289
+17   9.393528  11.304151
+18   9.196560  11.300147
+19   9.037488  11.383246
+20   8.826886  12.151116
+21   8.677570  11.479831
+22   8.510397  11.660929
+23   8.340991  11.546013
+24   8.168104  11.531203
+25   8.069410  11.523489
+26   7.828147  11.374417
+27   7.749341  11.337671
+Test Metrics:
+pcc    0.252952
+scc    0.239363
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.7941978573799133
+<class 'list'> <class 'list'>
+2024-03-09 00:53:02.845872: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 00:53:02.895960: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 00:53:02.896496: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 00:53:02.898249: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 00:53:02.907006: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 00:53:03.970355: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:7 ------
+Training with 48000 data points
+Remaining training data: 38313
+2024-03-09 00:53:11.143663: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 00:53:25.187488: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 00:53:25.289154: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:53:25.487776: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 00:53:27.345085: I external/local_xla/xla/service/service.cc:168] XLA service 0x14c5852d51f0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 00:53:27.345681: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 00:53:27.352842: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709967207.456284 2872934 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.818637  13.587028
+2   11.580528  11.592692
+3   11.407149  11.490697
+4   11.289560  11.414677
+5   11.127371  11.429640
+6   10.985305  11.477201
+7   10.877007  11.292605
+8   10.684627  11.251848
+9   10.521758  11.308059
+10  10.386533  11.196600
+11  10.177339  11.228247
+12  10.041854  11.180833
+13   9.835060  11.086150
+14   9.663500  12.049836
+15   9.439276  11.164912
+16   9.204195  11.525409
+17   9.067509  11.489368
+18   8.942901  11.141629
+19   8.723894  11.726753
+20   8.516205  11.829652
+21   8.353886  11.574588
+22   8.236367  11.564672
+23   8.034686  11.172823
+24   7.866418  11.688996
+25   7.715353  12.804882
+26   7.558229  11.106227
+27   7.417401  11.512573
+28   7.332099  11.675692
+Test Metrics:
+pcc    0.25646
+scc    0.23725
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.9348711371421814
+<class 'list'> <class 'list'>
+2024-03-09 01:02:57.781490: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:02:57.830873: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:02:57.831387: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:02:57.833278: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:02:57.841981: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:02:58.873350: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:8 ------
+Training with 54000 data points
+Remaining training data: 32313
+2024-03-09 01:03:06.834350: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:03:22.254231: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:03:22.359459: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:03:22.563969: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:03:24.508359: I external/local_xla/xla/service/service.cc:168] XLA service 0x14e649c6ea10 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:03:24.509035: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:03:24.516719: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709967804.622693 2875988 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.670082  11.959439
+2   11.425614  11.733373
+3   11.266381  11.407207
+4   11.064327  11.327829
+5   10.921140  11.358290
+6   10.746024  11.257261
+7   10.630153  11.297141
+8   10.434716  11.229981
+9   10.267106  11.161759
+10  10.089972  11.197198
+11   9.874143  11.159704
+12   9.668197  11.199274
+13   9.516815  11.170260
+14   9.261111  11.114838
+15   9.109001  11.151391
+16   8.886072  10.742959
+17   8.721269  11.287773
+18   8.499430  11.100572
+19   8.352524  11.256410
+20   8.133410  11.369589
+21   7.957959  11.487988
+22   7.822706  11.280428
+23   7.613557  11.008444
+24   7.448631  11.597080
+25   7.310926  11.062146
+26   7.147906  11.238626
+27   6.999888  11.088481
+28   6.863588  12.184705
+29   6.738568  11.440621
+30   6.584947  11.494780
+31   6.504755  11.070478
+Test Metrics:
+pcc    0.301747
+scc    0.286072
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.791724443435669
+<class 'list'> <class 'list'>
+2024-03-09 01:14:39.372742: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:14:39.423759: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:14:39.424450: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:14:39.426343: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:14:39.435557: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:14:40.495734: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:9 ------
+Training with 60000 data points
+Remaining training data: 26313
+2024-03-09 01:14:48.596003: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:15:03.940816: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:15:04.043098: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:15:04.243713: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:15:06.141640: I external/local_xla/xla/service/service.cc:168] XLA service 0x14f6ee71faa0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:15:06.142224: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:15:06.149870: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709968506.256006 2880403 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.490469  11.863092
+2   11.243902  11.557285
+3   11.059302  11.471747
+4   10.851773  11.345846
+5   10.726984  11.376703
+6   10.529621  11.279343
+7   10.361194  11.202065
+8   10.213400  11.323379
+9   10.028191  11.275895
+10   9.844236  11.116586
+11   9.622777  11.201328
+12   9.375403  11.049106
+13   9.202314  11.094780
+14   8.977550  11.462717
+15   8.779188  11.549766
+16   8.570463  11.164399
+17   8.386673  11.430707
+18   8.165796  11.394250
+19   7.974346  11.288402
+20   7.767882  12.372449
+21   7.622282  11.204386
+22   7.426644  11.206183
+23   7.284378  11.837708
+24   7.108728  11.264617
+25   6.928440  11.401026
+26   6.823366  11.553173
+27   6.632221  12.609010
+Test Metrics:
+pcc    0.307574
+scc    0.291032
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.7495946288108826
+<class 'list'> <class 'list'>
+2024-03-09 01:25:34.283620: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:25:34.334586: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:25:34.335280: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:25:34.337312: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:25:34.346169: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:25:35.417513: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:10 ------
+Training with 66000 data points
+Remaining training data: 20313
+2024-03-09 01:25:44.066881: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:25:59.760357: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:25:59.863758: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:26:00.069293: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:26:01.938669: I external/local_xla/xla/service/service.cc:168] XLA service 0x9d37a80 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:26:01.939434: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:26:01.947574: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709969162.055756 2883218 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.386395  11.806667
+2   11.183287  11.564364
+3   10.982626  11.580552
+4   10.771085  11.370725
+5   10.576709  11.341866
+6   10.393489  11.224342
+7   10.222941  11.173844
+8   10.052773  11.185926
+9    9.847034  11.198049
+10   9.598794  11.099937
+11   9.345459  11.571239
+12   9.150520  11.095108
+13   8.933805  11.263817
+14   8.686045  11.293859
+15   8.472681  11.038808
+16   8.270975  10.939583
+17   8.045558  11.618855
+18   7.813848  11.199603
+19   7.654133  11.192885
+20   7.431911  11.511957
+21   7.296100  10.967226
+22   7.121356  10.986329
+23   6.931635  11.295260
+24   6.821960  11.179233
+25   6.686733  11.004272
+26   6.525877  12.171844
+27   6.382823  11.713127
+28   6.218949  11.766850
+29   6.079650  11.331279
+30   5.944545  12.311583
+31   5.772369  11.583409
+Test Metrics:
+pcc    0.337141
+scc    0.330775
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.7651548385620117
+<class 'list'> <class 'list'>
+2024-03-09 01:37:49.783597: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:37:49.832905: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:37:49.833671: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:37:49.835579: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:37:49.844452: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:37:50.886794: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:11 ------
+Training with 72000 data points
+Remaining training data: 14313
+2024-03-09 01:38:00.269481: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:38:15.762577: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:38:15.861384: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:38:16.057700: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:38:17.908761: I external/local_xla/xla/service/service.cc:168] XLA service 0x14ded75f0300 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:38:17.909487: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:38:17.916870: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709969898.023901 2887288 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.246904  11.604302
+2   11.010591  11.519889
+3   10.755206  11.504020
+4   10.579104  11.254955
+5   10.341171  11.383363
+6   10.172299  11.139770
+7    9.934072  11.135900
+8    9.759229  11.207351
+9    9.468320  11.361338
+10   9.255526  11.385812
+11   8.997767  11.251301
+12   8.763646  11.570695
+13   8.491907  11.199690
+14   8.279315  11.067633
+15   8.034232  12.467623
+16   7.880843  11.281981
+17   7.648074  11.301919
+18   7.464715  11.114824
+19   7.303513  11.777976
+20   7.106458  12.330086
+21   6.943369  11.078055
+22   6.804026  12.006078
+23   6.607718  12.579012
+24   6.459841  11.863180
+25   6.314949  11.126337
+26   6.173988  11.821033
+27   6.032746  12.374484
+28   5.939978  11.153393
+29   5.779174  11.222507
+Test Metrics:
+pcc    0.313273
+scc    0.296097
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.673565149307251
+<class 'list'> <class 'list'>
+2024-03-09 01:49:39.898626: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:49:39.948861: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:49:39.949572: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:49:39.951485: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:49:39.960399: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:49:41.040629: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Uncertainty, Iteration:12 ------
+Training with 78000 data points
+Remaining training data: 8313
+2024-03-09 01:49:50.584090: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:50:06.232692: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:50:06.334526: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:50:06.539130: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:50:08.388966: I external/local_xla/xla/service/service.cc:168] XLA service 0x9daae30 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:50:08.389791: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:50:08.397436: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709970608.502584 2891826 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.199053  11.535089
+2   10.935488  11.470331
+3   10.676584  11.443898
+4   10.431206  11.272302
+5   10.215551  11.239118
+6   10.037422  11.116608
+7    9.773399  11.092791
+8    9.537168  11.532678
+9    9.222809  11.493177
+10   8.962770  11.369343
+11   8.700330  11.451724
+12   8.456568  11.210766
+13   8.186642  11.809168
+14   7.901590  11.328609
+15   7.759775  11.662510
+16   7.506213  11.448652
+17   7.301971  11.215757
+18   7.141646  11.504760
+19   6.900582  11.565631
+20   6.766231  11.700397
+21   6.613468  11.961366
+22   6.442063  11.513141
+Test Metrics:
+pcc    0.302700
+scc    0.285225
+Name: metrics, dtype: float64
+Average Standard Deviation of remaining data:0.5800366997718811
+<class 'list'> <class 'list'>
+2024-03-09 01:59:23.561146: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 01:59:23.610297: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 01:59:23.610936: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 01:59:23.612948: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 01:59:23.621723: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 01:59:24.691692: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:0 ------
+Training with 6000 data points
+Remaining training data: 80313
+2024-03-09 01:59:28.091871: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 01:59:43.233757: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 01:59:43.338142: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:59:43.536703: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 01:59:45.437526: I external/local_xla/xla/service/service.cc:168] XLA service 0xb39d870 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 01:59:45.438240: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 01:59:45.446216: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709971185.555588 2893563 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.428102  11.597869
+2   11.232133  11.598971
+3   11.249295  11.566387
+4   11.201737  11.771551
+5   11.105437  11.823415
+6   11.089320  12.013804
+7   11.004892  12.168181
+8   10.961073  12.543741
+9   10.932655  11.923382
+10  10.910141  11.889051
+11  10.838230  11.663857
+12  10.800930  11.593090
+13  10.816300  11.775550
+14  10.719672  11.719983
+15  10.634707  11.566263
+16  10.690813  11.647571
+17  10.546622  11.866507
+18  10.656419  11.593587
+19  10.501989  11.641615
+20  10.439240  11.679506
+21  10.274853  11.924391
+22  10.272463  12.005000
+23  10.189592  11.889646
+24  10.126276  12.227364
+25  10.102403  11.890613
+26  10.199982  11.712225
+27   9.984776  12.197783
+28   9.980062  12.156731
+29   9.761149  11.999840
+30   9.814178  12.054185
+Test Metrics:
+pcc    0.080248
+scc    0.082358
+Name: metrics, dtype: float64
+<class 'list'> <class 'pandas.core.indexes.base.Index'>
+2024-03-09 02:01:48.797612: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:01:49.033586: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:01:49.492094: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:01:49.688969: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:01:49.843308: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:01:51.165158: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:1 ------
+Training with 12000 data points
+Remaining training data: 74313
+2024-03-09 02:01:57.569119: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:02:12.543765: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:02:12.731081: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:02:12.928072: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:02:14.796153: I external/local_xla/xla/service/service.cc:168] XLA service 0x14740a2ecc00 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:02:14.796926: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:02:14.804616: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709971334.910414 2895829 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.545048  11.579327
+2   11.244411  11.881553
+3   11.239216  12.110877
+4   11.213111  12.188282
+5   11.048315  12.544061
+6   11.004494  11.679070
+7   10.997884  11.518090
+8   10.929781  11.559973
+9   10.833907  11.550927
+10  10.728853  11.549631
+11  10.718882  11.659173
+12  10.617796  11.749693
+13  10.553381  11.522340
+14  10.529123  11.715240
+15  10.387774  11.549958
+16  10.355630  11.556293
+17  10.351105  11.412436
+18  10.159617  11.989945
+19  10.100626  11.931108
+20   9.970526  11.984929
+21   9.994183  11.639206
+22   9.968859  11.564005
+23   9.807334  11.671989
+24   9.798446  11.732532
+25   9.708887  11.754626
+26   9.627650  11.618899
+27   9.501415  11.826370
+28   9.471133  11.656458
+29   9.447623  11.957914
+30   9.162834  12.206112
+31   9.123731  12.054723
+32   8.996189  12.724775
+Test Metrics:
+pcc    0.139012
+scc    0.125184
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:05:09.466809: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:05:09.517792: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:05:09.518461: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:05:09.520425: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:05:09.529637: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:05:10.599188: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:2 ------
+Training with 18000 data points
+Remaining training data: 68313
+2024-03-09 02:05:15.038658: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:05:30.123511: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:05:30.224520: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:05:30.423269: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:05:32.304950: I external/local_xla/xla/service/service.cc:168] XLA service 0xcb98ed0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:05:32.305636: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:05:32.313276: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709971532.419259 2898003 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.528995  11.649821
+2   11.244421  12.508924
+3   11.147018  12.492693
+4   11.093557  11.552818
+5   11.003960  11.462643
+6   10.937153  11.557035
+7   10.826782  11.609403
+8   10.736901  11.519110
+9   10.677095  11.519554
+10  10.539041  11.609285
+11  10.440670  11.497844
+12  10.355157  11.488428
+13  10.274978  11.477376
+14  10.189662  11.505757
+15  10.135822  11.426563
+16  10.010505  11.560019
+17   9.911589  11.901661
+18   9.776188  11.584049
+19   9.720632  11.700162
+20   9.610844  11.491228
+21   9.467997  11.876108
+22   9.379161  11.988789
+23   9.229436  11.722800
+24   9.116981  11.924205
+25   9.014106  11.881670
+26   8.979629  12.162431
+27   8.813285  11.932426
+28   8.687272  11.822181
+29   8.595287  12.148335
+30   8.455463  12.409642
+Test Metrics:
+pcc    0.197939
+scc    0.187682
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:09:04.113710: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:09:04.163587: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:09:04.164260: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:09:04.166189: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:09:04.175355: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:09:05.236754: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:3 ------
+Training with 24000 data points
+Remaining training data: 62313
+2024-03-09 02:09:10.273088: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:09:25.323079: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:09:25.426105: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:09:25.628399: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:09:27.475178: I external/local_xla/xla/service/service.cc:168] XLA service 0x9461430 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:09:27.476008: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:09:27.483938: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709971767.591389 2899296 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.400923  11.557955
+2   11.152685  11.916500
+3   11.073384  11.664118
+4   10.977880  11.424080
+5   10.861046  11.944679
+6   10.733575  11.498519
+7   10.588817  11.534573
+8   10.525723  11.441228
+9   10.471566  11.491535
+10  10.301201  11.451618
+11  10.166874  11.596313
+12  10.060616  11.483970
+13   9.966734  11.643514
+14   9.848839  11.508636
+15   9.760235  11.596144
+16   9.628879  11.760497
+17   9.490672  11.656015
+18   9.342818  11.466518
+19   9.218323  11.718722
+Test Metrics:
+pcc    0.177748
+scc    0.165373
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:13:07.166013: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:13:07.214824: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:13:07.215544: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:13:07.217496: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:13:07.226322: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:13:53.937129: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:4 ------
+Training with 30000 data points
+Remaining training data: 56313
+2024-03-09 02:14:42.591489: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:14:57.475347: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:14:57.574825: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:14:57.775018: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:14:59.661903: I external/local_xla/xla/service/service.cc:168] XLA service 0x149d8b237fa0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:14:59.662670: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:14:59.669748: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709972099.774817 2900947 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.381572  11.797121
+2   11.157527  11.859776
+3   11.004376  11.495445
+4   10.857381  11.690125
+5   10.712154  11.694403
+6   10.575926  11.579475
+7   10.451055  11.697338
+8   10.334260  11.529214
+9   10.207888  11.431476
+10  10.102906  11.538295
+11   9.954997  11.506235
+12   9.818651  11.594381
+13   9.702868  11.506534
+14   9.568595  11.710202
+15   9.440561  11.571023
+16   9.360907  11.455797
+17   9.189444  11.767443
+18   9.013545  11.615611
+19   8.857454  11.870584
+20   8.731375  11.700891
+21   8.517879  12.202282
+22   8.339486  12.317819
+23   8.224198  12.232977
+24   8.080295  11.511908
+Test Metrics:
+pcc    0.207546
+scc    0.198371
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:19:14.971001: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:19:15.022731: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:19:15.023514: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:19:15.025371: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:19:15.034325: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:19:16.116455: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:5 ------
+Training with 36000 data points
+Remaining training data: 50313
+2024-03-09 02:19:22.358515: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:19:37.505890: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:19:37.607464: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:19:37.811157: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:19:39.674207: I external/local_xla/xla/service/service.cc:168] XLA service 0x1487e331ca60 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:19:39.674864: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:19:39.682242: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709972379.787503 2905412 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.320324  12.308311
+2   11.063309  11.640448
+3   10.877922  11.987908
+4   10.731676  11.513885
+5   10.544463  11.616743
+6   10.427342  11.411937
+7   10.329984  11.417788
+8   10.137241  11.272221
+9   10.026867  11.440856
+10   9.857799  11.720269
+11   9.719802  11.614555
+12   9.553338  11.797559
+13   9.388784  11.217420
+14   9.237471  11.364296
+15   9.132104  11.480283
+16   8.853431  11.497630
+17   8.713378  11.574700
+18   8.496502  11.941578
+19   8.349279  11.400970
+20   8.201264  11.608117
+21   8.044698  11.845096
+22   7.917224  11.435240
+23   7.738005  11.869117
+24   7.559337  11.782825
+25   7.451755  11.862377
+26   7.310039  11.827632
+27   7.179770  11.940551
+28   7.028936  11.633492
+Test Metrics:
+pcc    0.223759
+scc    0.223915
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:25:08.962547: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:25:09.012889: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:25:09.013587: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:25:09.015603: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:25:09.024545: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:25:10.089473: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:6 ------
+Training with 42000 data points
+Remaining training data: 44313
+2024-03-09 02:25:16.695778: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:25:31.969808: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:25:32.071634: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:25:32.277955: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:25:34.129732: I external/local_xla/xla/service/service.cc:168] XLA service 0xa4d9250 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:25:34.130553: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:25:34.138633: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709972734.245121 2910517 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.287440  12.165074
+2   11.047474  11.821599
+3   10.874707  11.603613
+4   10.666581  11.568307
+5   10.458610  11.571181
+6   10.317454  11.425700
+7   10.191035  11.391572
+8   10.039980  11.279148
+9    9.887509  11.449327
+10   9.739964  11.712964
+11   9.619588  11.383193
+12   9.391815  11.588541
+13   9.246038  11.328058
+14   9.096604  11.391344
+15   8.867640  11.540889
+16   8.750387  11.463821
+17   8.525362  11.273699
+18   8.384660  11.846023
+19   8.198503  11.851667
+20   8.052988  11.364901
+21   7.876287  11.600896
+22   7.716022  11.596140
+23   7.598604  11.433886
+24   7.395879  11.602101
+25   7.234136  12.620455
+26   7.103306  11.503322
+27   6.976894  11.551852
+28   6.864662  11.923136
+29   6.745255  11.814574
+30   6.585185  12.694064
+31   6.482904  11.976975
+32   6.327351  11.691511
+Test Metrics:
+pcc    0.247624
+scc    0.241651
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:32:36.000852: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:32:36.050756: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:32:36.051538: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:32:36.053596: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:32:36.063003: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:32:37.134287: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:7 ------
+Training with 48000 data points
+Remaining training data: 38313
+2024-03-09 02:32:44.360122: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:32:58.519012: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:32:58.620852: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:32:58.820312: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:33:00.685043: I external/local_xla/xla/service/service.cc:168] XLA service 0x14afb90aee80 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:33:00.685715: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:33:00.692952: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709973180.799511 2914979 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.279960  12.177645
+2   11.030684  11.563498
+3   10.795609  11.950192
+4   10.616594  11.389397
+5   10.414818  11.844075
+6   10.240059  11.362289
+7   10.039000  11.266061
+8    9.875124  11.343871
+9    9.690157  11.274154
+10   9.483051  11.287123
+11   9.319011  11.653008
+12   9.059759  11.517872
+13   8.833223  11.335807
+14   8.690908  11.280894
+15   8.469269  11.109414
+16   8.265200  11.569624
+17   8.114768  11.926805
+18   7.901442  11.519454
+19   7.750406  11.663985
+20   7.600529  11.545174
+21   7.409449  11.575344
+22   7.280802  11.856252
+23   7.106673  11.547988
+24   6.984485  11.449722
+25   6.863762  11.572887
+26   6.729060  11.448120
+27   6.591768  12.146670
+28   6.445970  11.313920
+29   6.323783  12.472798
+30   6.162805  11.752967
+Test Metrics:
+pcc    0.265818
+scc    0.256577
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:39:29.531592: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:39:29.581233: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:39:29.581940: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:39:29.583866: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:39:29.592776: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:39:30.648690: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:8 ------
+Training with 54000 data points
+Remaining training data: 32313
+2024-03-09 02:39:38.225847: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:39:53.703713: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:39:53.805946: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:39:54.009963: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:39:55.875262: I external/local_xla/xla/service/service.cc:168] XLA service 0x144b98f738c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:39:55.876056: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:39:55.883639: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709973595.989583 2918430 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.257659  11.999751
+2   10.982494  11.456726
+3   10.747395  11.478705
+4   10.551533  11.866693
+5   10.340636  11.402567
+6   10.190874  11.297358
+7   10.015490  11.444905
+8    9.789459  11.455791
+9    9.586332  11.667582
+10   9.370264  11.633624
+11   9.115212  11.908054
+12   8.896078  11.498756
+13   8.681428  12.368702
+14   8.485172  11.503645
+15   8.305008  11.256277
+16   8.047081  11.381045
+17   7.865313  11.671353
+18   7.715119  11.978422
+19   7.530762  12.372965
+20   7.324371  11.446357
+21   7.219714  12.549244
+22   7.032736  11.913221
+23   6.804993  12.268587
+24   6.686241  11.451826
+25   6.507054  11.457843
+26   6.444746  11.724439
+27   6.264434  12.250635
+28   6.064869  11.484797
+29   5.990673  12.011828
+30   5.830948  11.902105
+Test Metrics:
+pcc    0.281701
+scc    0.273810
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:48:04.285347: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:48:04.335311: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:48:04.336025: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:48:04.337921: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:48:04.346751: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:48:05.404358: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:9 ------
+Training with 60000 data points
+Remaining training data: 26313
+2024-03-09 02:48:13.741835: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:48:29.326269: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:48:29.426286: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:48:29.632262: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:48:31.501145: I external/local_xla/xla/service/service.cc:168] XLA service 0x1468e62ecab0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:48:31.501948: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:48:31.509775: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709974111.617216 2921936 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.222844  12.005739
+2   10.959592  11.510254
+3   10.699754  11.459960
+4   10.455615  11.486336
+5   10.256259  11.482963
+6   10.043588  11.413763
+7    9.837496  11.509854
+8    9.602160  11.346207
+9    9.349947  11.547628
+10   9.099786  11.202457
+11   8.834838  11.641572
+12   8.628053  11.657586
+13   8.419683  11.235365
+14   8.186283  11.438241
+15   7.988006  11.535964
+16   7.799210  11.238473
+17   7.575254  11.261461
+18   7.431048  11.192364
+19   7.187317  11.363664
+20   7.052876  12.776499
+21   6.930756  12.329193
+22   6.703849  11.101145
+23   6.587386  11.882428
+24   6.429200  12.704399
+25   6.245033  11.846434
+26   6.173516  11.696073
+27   6.012503  11.512574
+28   5.876646  11.630441
+29   5.730385  11.696465
+30   5.632269  11.400494
+31   5.506594  12.275538
+32   5.401336  12.258033
+33   5.301299  11.183125
+34   5.158511  14.223669
+35   5.026932  12.105516
+36   4.971574  12.091934
+37   4.853825  11.622602
+Test Metrics:
+pcc    0.297951
+scc    0.290926
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 02:59:00.706029: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 02:59:00.757160: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 02:59:00.757840: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 02:59:00.759666: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 02:59:00.768467: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 02:59:01.834634: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:10 ------
+Training with 66000 data points
+Remaining training data: 20313
+2024-03-09 02:59:10.517393: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 02:59:26.198519: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 02:59:26.299191: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:59:26.498835: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 02:59:28.346100: I external/local_xla/xla/service/service.cc:168] XLA service 0x153de62f3750 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 02:59:28.346857: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 02:59:28.354974: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709974768.464101 2927279 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.163791  11.766426
+2   10.879652  11.548847
+3   10.602058  11.406153
+4   10.396695  11.366621
+5   10.157736  11.975269
+6    9.892015  11.347605
+7    9.656124  11.557180
+8    9.351153  11.347302
+9    9.149495  11.207099
+10   8.889416  11.022799
+11   8.618466  11.955330
+12   8.380461  11.176118
+13   8.139895  11.314008
+14   7.884944  11.064267
+15   7.728409  11.127828
+16   7.527049  11.745938
+17   7.307408  11.651709
+18   7.159156  11.328747
+19   6.956178  11.644469
+20   6.796093  11.763847
+21   6.597903  11.439919
+22   6.457060  11.556280
+23   6.289454  11.819187
+24   6.149517  11.733562
+25   6.004395  11.742319
+Test Metrics:
+pcc    0.319556
+scc    0.297037
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 03:08:13.379764: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 03:08:13.431243: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 03:08:13.431983: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 03:08:13.433835: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 03:08:13.442681: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 03:08:56.517402: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:11 ------
+Training with 72000 data points
+Remaining training data: 14313
+2024-03-09 03:09:50.707572: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 03:10:06.108268: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 03:10:06.209937: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 03:10:06.408999: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 03:10:08.283152: I external/local_xla/xla/service/service.cc:168] XLA service 0x151080d92630 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 03:10:08.283831: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 03:10:08.291152: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709975408.396101 2930104 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.222632  11.681413
+2   10.880816  11.442236
+3   10.608270  11.660941
+4   10.344476  11.402628
+5   10.061152  11.392606
+6    9.822380  11.221617
+7    9.550776  11.985230
+8    9.275856  11.214112
+9    9.011452  11.461061
+10   8.732959  11.494426
+11   8.450796  10.978988
+12   8.214529  10.991794
+13   8.030528  11.198234
+14   7.731287  11.292486
+15   7.561085  10.998852
+16   7.349389  11.287776
+17   7.157813  11.983881
+18   6.977447  11.054979
+19   6.751062  12.358613
+20   6.617125  11.259650
+21   6.498598  11.578148
+22   6.319388  12.386168
+23   6.169217  11.689131
+24   6.024895  13.054814
+25   5.911148  11.836304
+26   5.761930  11.538239
+Test Metrics:
+pcc    0.291382
+scc    0.268833
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>
+2024-03-09 03:19:11.782114: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2024-03-09 03:19:11.832006: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2024-03-09 03:19:11.832527: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2024-03-09 03:19:11.834491: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2024-03-09 03:19:11.843471: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-09 03:19:12.921407: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+------ Fold:8, Mode:Random, Iteration:12 ------
+Training with 78000 data points
+Remaining training data: 8313
+2024-03-09 03:19:22.660368: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1929] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 31141 MB memory:  -> device: 0, name: Tesla V100-PCIE-32GB, pci bus id: 0000:86:00.0, compute capability: 7.0
+2024-03-09 03:19:38.202498: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:454] Loaded cuDNN version 8904
+2024-03-09 03:19:38.301619: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 03:19:38.504021: I external/local_tsl/tsl/platform/default/subprocess.cc:304] Start cannot spawn child process: No such file or directory
+2024-03-09 03:19:40.316495: I external/local_xla/xla/service/service.cc:168] XLA service 0x8b18d90 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-03-09 03:19:40.317377: I external/local_xla/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-PCIE-32GB, Compute Capability 7.0
+2024-03-09 03:19:40.324963: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:269] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+I0000 00:00:1709975980.429901 2933329 device_compiler.h:186] Compiled cluster using XLA!  This line is logged at most once for the lifetime of the process.
+         loss   val_loss
+1   11.195521  11.569590
+2   10.836333  11.777925
+3   10.556437  12.236520
+4   10.293229  11.419045
+5   10.056826  11.395193
+6    9.786964  11.415126
+7    9.515714  11.887635
+8    9.209758  11.231669
+9    8.955204  11.416031
+10   8.697336  11.750538
+11   8.431294  11.973877
+12   8.171298  11.441190
+13   7.983771  11.467759
+14   7.697369  11.456796
+15   7.495637  11.601559
+16   7.253316  12.163427
+17   7.086065  11.418845
+18   6.902303  11.348271
+19   6.740905  11.244574
+20   6.569773  11.298703
+21   6.411748  11.553435
+22   6.256640  11.387665
+23   6.074031  11.707389
+Test Metrics:
+pcc    0.302815
+scc    0.288309
+Name: metrics, dtype: float64
+<class 'list'> <class 'list'>

@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --mem=8G
 #SBATCH --cpus-per-task=2
-#SBATCH -e log/genetic_words.err-%A
+#SBATCH -e log/genetic_words.out-%A
 #SBATCH -o log/genetic_words.out-%A
 
 eval $(spack load --sh miniconda3)
 source activate language
 
-output=$1_${SLURM_JOB_ID}
+output=Gen_${SLURM_JOB_ID}
 mkdir -p $output
 
 datafile=Data/activity.csv

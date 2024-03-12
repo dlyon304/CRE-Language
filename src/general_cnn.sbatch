@@ -1,12 +1,11 @@
 #!/bin/bash
-#SBATCH --mem=8G
+#SBATCH --mem=10G
 #SBATCH --cpus-per-task=4
-#SBATCH --mem=8G
 #SBATCH --time=0
 #SBATCH -o log/General_cnn.out-%A_%a
-#SBATCH -e log/General_cnn.err-%A_%a
+#SBATCH -e log/General_cnn.out-%A_%a
 #SBATCH --array=1-7%3
-#SBATCH -J CNN_Clf_
+#SBATCH -J ATACe-3
 
 # LOAD SPACK ENV
 eval $(spack env activate --sh tensorflow)
@@ -22,6 +21,6 @@ fi
 dirname=$1_${runname}/${fold}
 mkdir -p $dirname
 
-datafile=Data/ATAC/labeled_data_164.csv
+datafile=Data/ATAC/labeled_data.csv
 
-python3 src/General_cnn.py $dirname $datafile --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY open
+python3 src/general_cnn.py $dirname $datafile --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY open --lr 0.001
