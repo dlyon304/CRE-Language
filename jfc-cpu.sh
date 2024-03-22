@@ -7,7 +7,7 @@
 #SBATCH -J jn-c-TF
 
 # LOAD SPACK ENV
-eval $(spack env activate --sh tensorflow)
+eval $(spack env activate --sh tensorflow-gpu)
 
 # CREATE PORT AND GET NAME OF SERVER NODE
 port=$(shuf -i9000-9999 -n1)

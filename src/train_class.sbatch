@@ -6,10 +6,10 @@
 #SBATCH --mem=8G
 #SBATCH --cpus-per-task=4
 #SBATCH --time=0
-#SBATCH -o log/reg_cnn.out-%A_%a
-#SBATCH -e log/reg_cnn.out-%A_%a
+#SBATCH -o log/class_cnn.out-%A_%a
+#SBATCH -e log/class_cnn.out-%A_%a
 #SBATCH --array=1-10%3
-#SBATCH -J reg
+#SBATCH -J cnn_class
 
 # LOAD SPACK ENV
 eval $(spack env activate --sh tensorflow-gpu)
@@ -25,6 +25,6 @@ fi
 dirname=Runs/$1/${fold}
 mkdir -p $dirname
 
-datafile=Data/genomic.csv
+datafile=Data/ATAC/ATAC.csv
 
-python3 src/train_regression.py $dirname $datafile --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY expression_log2
+python3 src/train_class.py $dirname $datafile --num_classes 2 --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY open --lr 0.0002

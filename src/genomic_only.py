@@ -6,15 +6,16 @@ import argparse
 import numpy as np
 import pandas as pd
 import random
-import pickle
+
+from scipy.io import savemat
+from scipy.stats import linregress, spearmanr
 
 import tensorflow as tf
 from tensorflow import keras
-from sklearn.preprocessing import LabelEncoder
-from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
-from tf_tools import cnn_classifier
+from sklearn.metrics import classification_report
+from tf_tools import cnn_regression
 
-
+nsamples = 100
 
 def one_hot_seqs(seqs) -> np.array:
     static_1hotmap = {
@@ -36,7 +37,10 @@ def one_hot_seqs(seqs) -> np.array:
 
 
 
-def main(output_dir, data_file, batch_size, epochs, fold, FEATURE_KEY, LABEL_KEY, lr):
+def main(output_dir, data_file, batch_size, epochs, num_test, fold, FEATURE_KEY, LABEL_KEY, lr):
+    
+    keras.utils.set_random_seed(13*fold+7*fold+1)
+    learning_rate = lr
     
     #Read and split up data into train, validate, test based on fold
     filename, file_extension = os.path.splitext(data_file)
@@ -45,9 +49,9 @@ def main(output_dir, data_file, batch_size, epochs, fold, FEATURE_KEY, LABEL_KEY
     else:
         data_df = pd.read_csv(data_file, index_col=0)
     
-    test_df = data_df[data_df['test_set']]
-    validation_df = data_df[(data_df['fold'] == fold) & (~data_df['test_set'])]
-    train_df = data_df[(data_df['fold'] != fold) & (~data_df['test_set'])]
+    test_df = data_df[data_df['test_set']].sample(frac=1)
+    validation_df = data_df[data_df['validation_set']].sample(frac=1)
+    train_df = data_df[data_df['train_set']]
     
     print(len(train_df), ": training points", flush=True)
     print(len(validation_df), ": validation points", flush=True)
@@ -59,32 +63,31 @@ def main(output_dir, data_file, batch_size, epochs, fold, FEATURE_KEY, LABEL_KEY
     x_validation = one_hot_seqs(validation_df[FEATURE_KEY])
     x_test = one_hot_seqs(test_df[FEATURE_KEY])
     
-    encoder = LabelEncoder()
-    encoder.fit(data_df[LABEL_KEY])
-    classes = encoder.classes_
-    num_classes = len(classes)
-    y_train = encoder.transform(train_df[LABEL_KEY])
-    y_validation = encoder.transform(validation_df[LABEL_KEY])
-    y_test = encoder.transform(test_df[LABEL_KEY])
-
-    y_train = keras.utils.to_categorical(y_train, num_classes)
-    y_validation = keras.utils.to_categorical(y_validation, num_classes)
-    y_test = keras.utils.to_categorical(y_test, num_classes)
+    y_train = train_df[LABEL_KEY].values
+    y_validation = validation_df[LABEL_KEY].values
+    y_test = test_df[LABEL_KEY].values
     
     
     ##############################################################
-    # Create model and callbacks then fit
+    # Create model and callbacks
     
+    cbs = []
     # Tensorboard setup
     tensor_logs = os.path.join(output_dir, "tb_logs")
     os.makedirs(tensor_logs, exist_ok=True)
     tensorboard_cb = keras.callbacks.TensorBoard(tensor_logs, histogram_freq=1)
+    cbs.append(tensorboard_cb)
     
     # Early stopping setup
     earlystop_cb = keras.callbacks.EarlyStopping('val_loss', patience=15)
-
-    # Load model
-    model = cnn_classifier.getClassCNN(len(x_train[0]),num_classes, lr=lr)
+    cbs.append(earlystop_cb)
+    
+    #Livestream and subscribe
+    livestream_cb = keras.callbacks.CSVLogger(filename = os.path.join(output_dir, "live_log.csv"))
+    #cbs.append(livestream_cb)
+    
+    # Load model and fit
+    model = cnn_regression.tranferNet(input_shape=(len(data_df.iloc[0][FEATURE_KEY]),4),lr=learning_rate)
     
     history = model.fit(
         x_train,
@@ -92,7 +95,7 @@ def main(output_dir, data_file, batch_size, epochs, fold, FEATURE_KEY, LABEL_KEY
         epochs=epochs,
         validation_data=(x_validation, y_validation),
         batch_size=batch_size,
-        callbacks =[earlystop_cb, tensorboard_cb],
+        callbacks = cbs,
         verbose=0,
     )
     
@@ -107,19 +110,30 @@ def main(output_dir, data_file, batch_size, epochs, fold, FEATURE_KEY, LABEL_KEY
     )
     
     
-    ###########################################################
-    # Test model performance and get score metrics
+    # ###########################################################
+    # # Test model performance and get score metrics
     
     model.save(os.path.join(output_dir, "cnn_model.keras"))
     
-    y_pred1 = model.predict(x_test, verbose=0)
-    y_pred = np.argmax(y_pred1, axis=1)
-    y_true = np.argmax(y_test, axis=1)
-    print("Test Set Report")
-    print(classification_report(y_true, y_pred,target_names=classes), flush=True)
-    # report = classification_report(y_true, y_pred,target_names=classes,output_dict=True)
-    # with open(os.path.join(output_dir,'report.pkl'), 'wb') as file:
-    #     pickle.dump(report, file)
+    predictions = []
+    for _ in range(num_test):
+        predictions.append(model.predict(x_test, verbose=0).flatten())
+    predictions = np.stack(predictions)
+    preds_mean = np.mean(predictions,axis=0)
+    pcc = linregress(preds_mean, y_test).rvalue
+    scc = spearmanr(preds_mean,y_test).statistic
+    
+    stats = pd.Series(
+        [pcc,scc],
+        index=['pcc','scc'],
+        name='metrics'
+    )
+    stats.to_csv(
+        os.path.join(output_dir, "test_metrics.csv")
+    )
+    print("Test Metrics:", flush=True)
+    print(stats, flush=True)
+    
     
     return
     
@@ -131,10 +145,11 @@ if __name__ == "__main__":
     parser.add_argument("data_file", type=str, help='Path to file with features and lables')
     parser.add_argument("--batch_size", type=int, default=128)
     parser.add_argument("--epochs", type=int, default=100)
+    parser.add_argument("--num_test", type=int, default=20, help="Number of times to run test set through dropout model")
     parser.add_argument("--fold", type=int, default=1)
     parser.add_argument("--FEATURE_KEY", type=str, default='sequence', help="Column name(s) fo feature for model input")
     parser.add_argument("--LABEL_KEY", type=str, default='activity_bin')
-    parser.add_argument("--lr", type=float, default=0.0001, help="Learning Rate")
+    parser.add_argument("--lr", type=float, default=0.0002, help="Learning Rate")
     args = parser.parse_args()
     
     main(**vars(args))

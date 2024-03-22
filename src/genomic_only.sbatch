@@ -9,7 +9,7 @@
 #SBATCH -o log/reg_cnn.out-%A_%a
 #SBATCH -e log/reg_cnn.out-%A_%a
 #SBATCH --array=1-10%3
-#SBATCH -J reg
+#SBATCH -J reg_gen
 
 # LOAD SPACK ENV
 eval $(spack env activate --sh tensorflow-gpu)
@@ -22,9 +22,9 @@ else
     runname=${SLURM_ARRAY_JOB_ID}
 fi
 
-dirname=Runs/$1/${fold}
+dirname=Runs/$1_${runname}/${fold}
 mkdir -p $dirname
 
 datafile=Data/genomic.csv
 
-python3 src/train_regression.py $dirname $datafile --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY expression_log2
+python3 src/genomic_only.py $dirname $datafile --fold ${fold} --FEATURE_KEY sequence --LABEL_KEY expression_log2

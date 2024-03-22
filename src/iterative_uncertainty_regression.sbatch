@@ -22,9 +22,9 @@ else
     runname=${SLURM_ARRAY_JOB_ID}
 fi
 
-iterations=12
+iterations=18
 folder=Runs/$1
-test_runs=20
+test_runs=100
 
 # if [ $fold -eq 1 ]
 # then
@@ -41,7 +41,7 @@ do
     mkdir -p $dirname
     while [ True ]
     do
-        python3 src/iterative_uncertainty_regression.py $dirname $datafile $mode $i --fold $fold --FEATURE_KEY sequence --LABEL_KEY expression_log2 --num_test $test_runs --sampling_size 6000
+        python3 src/iterative_uncertainty_regression.py $dirname $datafile $mode $i --fold $fold --FEATURE_KEY sequence --LABEL_KEY expression_log2 --num_test $test_runs --sampling_size 4000
 
         if [ $i -eq $iterations ]
         then

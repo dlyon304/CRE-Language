@@ -9,6 +9,7 @@ import argparse
 import numpy as np
 import pandas as pd
 import random
+import time
 
 from scipy.io import savemat
 from scipy.stats import linregress, spearmanr
@@ -43,6 +44,8 @@ def getNewData(model,df, feature_key,mode,nt,sz):
     k = sz
     if k > len(remaining_df):
         k = len(remaining_df)
+        if k==0:
+            return []
         
     # If we are in Random mode
     if mode == 'Random':
@@ -130,14 +133,21 @@ def main(output_dir, data_file, mode, iteration, batch_size, epochs, initial_dat
     
     # Get the latest training data set
     if iteration == '0':
-        training_i = train_df.sample(n=initial_data, random_state=fold).index
+        training_i = train_df[train_df['data_batch_name'] == 'Genomic'].index
         if fold == 0:
             pass
             #TODO put writeout here
     else:
         iter_input_dir = os.path.join(output_dir, str(int(iteration)-1))
-        with open(os.path.join(iter_input_dir, "next_index.line"), 'r') as file:
-            data = file.read()
+        attempts = 0
+        while attempts < 20:
+            try:
+                with open(os.path.join(iter_input_dir, "next_index.line"), 'r') as file:
+                    data = file.read()
+            except:
+                attempts += 1
+                print("Next Index file not found on attempt", attempts, flush=True)
+                time.sleep(1)
         training_i = data.strip().split(" ")
     
     train_df.loc[training_i, ['used']] = True

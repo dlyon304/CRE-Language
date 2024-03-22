@@ -75,19 +75,18 @@ def main(output_dir, data_file, batch_size, epochs, num_test, fold, FEATURE_KEY,
     tensor_logs = os.path.join(output_dir, "tb_logs")
     os.makedirs(tensor_logs, exist_ok=True)
     tensorboard_cb = keras.callbacks.TensorBoard(tensor_logs, histogram_freq=1)
-    #cbs.append(tensorboard_cb)
+    cbs.append(tensorboard_cb)
     
     # Early stopping setup
     earlystop_cb = keras.callbacks.EarlyStopping('val_loss', patience=15)
-    #cbs.append(earlystop_cb)
+    cbs.append(earlystop_cb)
     
     #Livestream and subscribe
     livestream_cb = keras.callbacks.CSVLogger(filename = os.path.join(output_dir, "live_log.csv"))
-    cbs.append(livestream_cb)
+    #cbs.append(livestream_cb)
     
     # Load model and fit
-    model = cnn_regression.originalResNet()
-    model.compile(loss=tf.keras.losses.MeanAbsoluteError(), optimizer=keras.optimizers.Adam(learning_rate=lr))
+    model = cnn_regression.tranferNet(input_shape=(len(data_df.iloc[0][FEATURE_KEY]),4),lr=lr)
     
     history = model.fit(
         x_train,

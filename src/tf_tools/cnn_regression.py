@@ -4,6 +4,7 @@ import random
 import os
 
 import tensorflow as tf
+from tensorflow import keras
 from keras import layers, Input, Model
 
 dropout = 0.15
@@ -179,7 +180,7 @@ def smallerResNet(input_shape=(164,4),
 
     return model
 
-def originalResNet(input_shape=(164,4)):
+def originalResNet(input_shape=(164,4), lr = 0.0002,output='linear'):
     
     X_input = Input(input_shape)
     X = X_input
@@ -197,7 +198,7 @@ def originalResNet(input_shape=(164,4)):
     
     for name, nfilters, filter_size, activation, dilation_layers, pool_size in architecture:
         X = layers.ZeroPadding1D(filter_size-1)(X)
-        X = layers.Conv1D(filters=nfilters, kernel_size=filter_size,padding='same')(X)
+        X = layers.Conv1D(filters=nfilters, kernel_size=filter_size,padding='valid')(X)
         X = layers.BatchNormalization(name=name+'_bn')(X)
         X = layers.Activation(activation)(X)
         X = MCDropout(conv_dropout, name=name+'_cMCdrop')(X)
@@ -212,9 +213,69 @@ def originalResNet(input_shape=(164,4)):
     X = layers.BatchNormalization(name="Linear_bn")(X)
     X = layers.Activation('relu')(X)
     X = MCDropout(fc_dropout, name='fc_MCdrop')(X)
-    X = layers.Dense(1, name="output_layer")(X)
+    X = layers.Dense(1, activation=output, name="output_layer")(X)
     
     model = Model(inputs=X_input, outputs=X, name='originalResNet')
+    
+    model.compile(loss='mae',optimizer=keras.optimizers.Adam(learning_rate=lr))
 
     return model
+
+def tranferNet(input_shape=(164,4), lr = 0.0002,output='linear'):
     
+    hidden_layers = 5
+    dense_layers = 2
+    neurons = 180
+    kernels = [11,7,3,3,3]
+    dense_neurons = 128
+    pool_size=3
+    dropout=0.4
+    
+    model = keras.Sequential()
+    model.add(Input(input_shape))
+    
+    for i in range(hidden_layers):
+        model.add(layers.Conv1D(filters=neurons,kernel_size=kernels[i],padding='same',name='conv_'+str(i)))
+        model.add(layers.BatchNormalization(name='conv_bn_'+str(i)))
+        model.add(layers.Activation('relu'))
+        
+    model.add(layers.MaxPooling1D(pool_size=pool_size, name='pool_'+str(i)))
+    model.add(layers.Flatten())
+    for i in range(dense_layers):
+        model.add(layers.Dense(units=dense_neurons))
+        model.add(layers.BatchNormalization(name='dense_bn_'+str(i)))
+        model.add(layers.Activation('relu'))
+        model.add(layers.Dropout(dropout, name='MCD_'+str(i)))
+    model.add(layers.Dense(units=1, activation=output, name='output'))
+    
+    model.compile(loss='mae',optimizer=keras.optimizers.Adam(learning_rate=lr))
+    return model
+
+def bestResNet(input_shape=(164,4), lr = 0.0002, conv_k =[(11,128),(5,128),(3,64)], dense_n=[256,128], dropout=0.1,
+               pool_size=3, bins=1,output='linear',loss='mae',optimizer=keras.optimizers.Adam):
+    
+    #Hardcoding 2 conv per block, and 2 dense layers, may change
+    block = 1
+    
+    model = keras.Sequential()
+    model.add(Input(input_shape))
+    
+    for size, shape in conv_k:
+        model.add(layers.Conv1D(filters=shape,kernel_size=size,padding='same',name=str(block)+'_conv1'))
+        model.add(layers.Conv1D(filters=shape,kernel_size=size,padding='same',name=str(block)+'_conv2'))
+        model.add(layers.BatchNormalization())
+        model.add(layers.Activation('relu'))
+        model.add(layers.MaxPooling1D(pool_size=pool_size))
+        block += 1
+    
+    model.add(layers.Flatten())
+    for neurons in dense_n:
+        model.add(layers.Dense(units=neurons))
+        model.add(layers.Dropout(dropout))
+        
+    model.add(layers.Dense(bins,activation=output))
+    
+    model.compile(loss=loss,optimizer=optimizer(learning_rate=lr))
+    return model
+    
+        
